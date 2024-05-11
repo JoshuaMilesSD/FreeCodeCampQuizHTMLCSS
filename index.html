@@ -9,13 +9,11 @@
   </head>
   <body>
     <header>
-      <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
-      <h1>HTML/CSS Quiz</h1>  
+      <img id="logo" alt="freeCodeCamp" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+      <h1>HTML/CSS Quiz</h1>
       <nav>
-
-        
         <ul>
-            <li><a href="#student-info">INFO</a></li>
+          <li><a href="#student-info">INFO</a></li>
           <li><a href="#html-questions">HTML</a></li>
           <li><a href="#css-questions">CSS</a></li>
         </ul>
@@ -23,26 +21,47 @@
     </header>
     <main>
       <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
-        /*only did 3 today , but as much as i could before going to sleep*/
-
-
-        
-        <h2 id="student-info">Student Info</h2>
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student Info</h2>
           <div class="info">
             <label for="student-name">Name:</label>
-            <input id="student-name" />
+            <input type="text" name="student-name" id="student-name" />
           </div>
           <div class="info">
             <label for="student-email">Email:</label>
-            <input id="student-email" />
+            <input type="email" name="student-email" id="student-email" />
           </div>
           <div class="info">
-            <label for="birth-date">D.O.B.:</label>
-            <input id="birth-date" />
+            <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+            <input type="date" name="birth-date" id="birth-date" />
           </div>
         </section>
-
-        
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">HTML</h2>
+          <div class="question-block">
+            <p>1</p>
+            <fieldset class="question">
+              <legend></legend>
+              <ul>
+                <li></li>
+                <li></li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="question-block">
+            <p>2</p>
+            <fieldset class="question">
+              <legend></legend>
+              <ul>
+                <li></li>
+                <li></li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">CSS</h2>
+        </section>
       </form>
     </main>
   </body>
